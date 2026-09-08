@@ -3,3 +3,4 @@ venv/ __pycache__/
 test.json
 venv/ __pycache__/ test.json
 tasks.db
+   __pycache__/

@@ -73,3 +73,5 @@ Opened `tasks.db` directly in DB Browser for SQLite and ran queries by hand, con
 Ran `SELECT * FROM tasks WHERE done = 1;` in DB Browser — returned the single completed task ("Walk the dog"), confirming filtering works directly against the SQLite file.
 
 Also confirmed that running `UPDATE tasks SET done = 1;` in DB Browser was reflected instantly through `GET /tasks` with no server restart, and that deleting all rows and restarting the server correctly re-triggered the seed logic — proving the seed-only-when-empty check works as intended.
+
+![DB Browser screenshot](db-browser-screenshot.png)

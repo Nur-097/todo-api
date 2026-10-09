@@ -103,3 +103,8 @@ I never told it what status code `DELETE` should return, or that `PUT` needed to
 
 **One rematch:**
 Adding "return 204 with an empty body on delete" and "title and done should both be optional in the update, so a client can send either field independently" to the prompt would likely fix both issues in a second pass.
+
+## Run Postgres
+```
+docker run --name taskdb -e POSTGRES_PASSWORD=dev -e POSTGRES_DB=tasks -p 5432:5432 -v taskdata:/var/lib/postgresql -d postgres
+```

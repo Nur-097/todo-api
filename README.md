@@ -105,6 +105,9 @@ I never told it what status code `DELETE` should return, or that `PUT` needed to
 Adding "return 204 with an empty body on delete" and "title and done should both be optional in the update, so a client can send either field independently" to the prompt would likely fix both issues in a second pass.
 
 ## Run Postgres
+
 ```
-docker run --name taskdb -e POSTGRES_PASSWORD=dev -e POSTGRES_DB=tasks -p 5432:5432 -v taskdata:/var/lib/postgresql -d postgres
+docker run --name taskdb -e POSTGRES_PASSWORD=dev -e POSTGRES_DB=tasks -p 5433:5432 -v taskdata:/var/lib/postgresql -d postgres
 ```
+
+Port 5433 is used on the host because a local PostgreSQL service may already occupy 5432. Inside the container Postgres still listens on 5432.

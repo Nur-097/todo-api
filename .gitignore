@@ -3,3 +3,6 @@ __pycache__/
 tasks.db
 test.json
 .env
+new.json
+done.json
+empty.json
